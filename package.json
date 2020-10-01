@@ -1,0 +1,30 @@
+{
+  "name": "@yummy/named-routes",
+  "version": "0.0.1",
+  "description": "Create named route functions, e.g. peopleUrl() /* => http://example.com/people */ or taskPath(\"123\") /* => /tasks/123 */",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava",
+    "test:watch": "ava --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudionrails/yummy-named-routes.js.git"
+  },
+  "keywords": [
+    "named route",
+    "route matching",
+    "routes",
+    "routing"
+  ],
+  "author": "Rudolf Schmidt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rudionrails/yummy-named-routes.js/issues"
+  },
+  "homepage": "https://github.com/rudionrails/yummy-named-routes.js#readme",
+  "devDependencies": {
+    "ava": "^3.13.0",
+    "nyc": "^15.1.0"
+  }
+}

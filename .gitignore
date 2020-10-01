@@ -1,0 +1,20 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+.cache/
+dist/
+/node_modules
+
+# testing
+/coverage
+.nyc_output
+
+# linting
+.eslintcache
+
+# production
+/build
+
+# misc
+.DS_Store
+npm-debug.log*
