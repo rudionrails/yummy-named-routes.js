@@ -37,8 +37,12 @@ test("to return nested route, e.g. people/:id/tasks/:taskId", t => {
   );
 });
 
-test("to set computed property (set getType)", t => {
+test("to set getType property", t => {
   const routes = createRoutes({ tasks: "/tasks/:id" });
+  t.is("/tasks/:id", routes.tasksPath.getType());
+});
 
-  t.is("/tasks/:id", routes.tasksPath.getType);
+test("to set toString property", t => {
+  const routes = createRoutes({ tasks: "/tasks/:id" });
+  t.is("/tasks/:id", routes.tasksPath.toString());
 });

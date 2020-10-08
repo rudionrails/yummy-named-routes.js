@@ -4,7 +4,9 @@ function createRoute(route) {
       (acc, [key, value]) => acc.replace(new RegExp(`:${key}`, "g"), value),
       route
     );
-  routeFn.getType = route;
+
+  routeFn.getType = () => route;
+  routeFn.toString = () => route;
 
   return routeFn;
 }
