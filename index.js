@@ -1,14 +1,15 @@
-function createRoute(route) {
-  const routeFn = (params = {}) =>
+function createRoute(pattern) {
+  const route = (params = {}) =>
     Object.entries(params).reduce(
       (acc, [key, value]) => acc.replace(new RegExp(`:${key}`, "g"), value),
-      route
+      pattern
     );
 
-  routeFn.getType = () => route;
-  routeFn.toString = () => route;
+  route.pattern = pattern;
+  route.getType = () => pattern;
+  route.toString = () => pattern;
 
-  return routeFn;
+  return route;
 }
 
 function createRoutes(objectOrFn) {
