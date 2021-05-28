@@ -19,7 +19,7 @@ function createRoutes(objectOrFn) {
   return Object.entries(routes).reduce(
     (acc, [key, value]) => ({
       ...acc,
-      [`${key}Path`]: typeof value === "function" ? value : createRoute(value)
+      [`${key}Path`]: typeof value === "function" ? value : createRoute(value),
     }),
     {}
   );
