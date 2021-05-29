@@ -47,16 +47,16 @@ import TasksPage from "./src/pages/TasksPage";
 
 // Use the `createRoutes` helper to define multiple paths at once. The keys
 // are used and the "Route" suffix is added.
-export const { tasksPath } = createRoutes({
+export const { tasksRoute } = createRoutes({
   tasks: "/users/:userId/tasks/:id",
 });
 
 // or define every route individually with `createRoute`
-export const myTaskPath = createRoute("/tasks/:id");
+export const myTaskRoute = createRoute("/tasks/:id");
 
 export default {
-  [tasksPath]: TasksPage,
-  [myTaskPath]: TaskPage,
+  [tasksRoute]: TasksPage,
+  [myTaskRoute]: TaskPage,
 }
 
 ```
@@ -66,13 +66,13 @@ Now use a route in a component. The example uses React, but this could be any fr
 ```javascript
 import React from "react";
 
-import { myTaskPath } from "src/routes.js";
+import { myTaskRoute } from "src/routes.js";
 
 function List() {
   return (
     <div>
-      <a href={myTaskPath({ id: "123" })}>Task 123</a>
-      <a href={myTaskPath({ id: "987", foo: "bar })}>Task 987 with query string</a>
+      <a href={myTaskRoute({ id: "123" })}>Task 123</a>
+      <a href={myTaskRoute({ id: "987", foo: "bar })}>Task 987 with query string</a>
     </div>
   )
 }
