@@ -16,23 +16,15 @@ const userRoute = createRoute("/users/:id");
  * Calling the function will replace parameters inside the path and
  * append others as query string.
  */
-console.log(userRoute({ id: "123" }))
-// "/users/123"
-
-console.log(userRoute({ id: "123", foo: "bar" }));
-// "/users/123?foo=bar"
+userRoute({ id: "123" }); // => "/users/123"
+userRoute({ id: "123", foo: "bar" }); // => "/users/123?foo=bar"
 
 /*
- * You can access the initially passed pattern
+ * You can access the initially passed pattern in multiple ways
  */
-console.log(userRoute.pattern);
-// "/users/:id"
-
-console.log({ [userRoute]: true });
-// { "/users/:id": true }
-
-console.log(`The pattern is "${userRoute}"`);
-// The pattern is "/users/:id"
+const pattern = userRoute.pattern; // => "/users/:id"
+const routes = { [userRoute]: true } // => { "/users/:id": true }
+const text = `The pattern is "${userRoute}"`; // => The pattern is "/users/:id"
 
 ```
 
