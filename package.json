@@ -7,7 +7,7 @@
     "lint": "eslint . --ignore-path .gitignore",
     "prerelease": "npm run lint && npm run test",
     "release": "standard-version",
-    "test": "nyc ava",
+    "test": "nyc --reporter=lcov --reporter=text ava",
     "test:watch": "ava --watch"
   },
   "repository": {
