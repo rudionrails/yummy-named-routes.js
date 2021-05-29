@@ -1,9 +1,22 @@
+const qs = require("query-string");
+
 function createRoute(pattern) {
-  const route = (params = {}) =>
-    Object.entries(params).reduce(
-      (acc, [key, value]) => acc.replace(new RegExp(`:${key}`, "g"), value),
-      pattern
-    );
+  function route(params = {}) {
+    let path = pattern.repeat(1); // make a copy
+    let search = "";
+
+    Object.entries(params).forEach(([key, value]) => {
+      const regexp = new RegExp(`:${key}`, "g");
+
+      if (regexp.test(path)) {
+        path = path.replace(regexp, value);
+      } else {
+        search = qs.stringify({ ...qs.parse(search), [key]: value });
+      }
+    });
+
+    return search === "" ? path : `${path}?${search}`;
+  }
 
   route.pattern = pattern;
   route.getType = () => pattern;

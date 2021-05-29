@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* adds  property to createRoute ([f07e03a](https://github.com/rudionrails/yummy-named-routes.js/commit/f07e03a7a1834df69ed766acfa7b203f81491795))
+* adds property to createRoute ([f07e03a](https://github.com/rudionrails/yummy-named-routes.js/commit/f07e03a7a1834df69ed766acfa7b203f81491795))
 
 ### [0.0.3](https://github.com/rudionrails/yummy-named-routes.js/compare/v0.0.2...v0.0.3) (2020-10-08)
 
