@@ -1,6 +1,6 @@
 {
   "name": "@yummy/named-routes",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Create named route functions, e.g. taskRoute(\"123\") /* => /tasks/123 */",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/rudionrails/yummy-named-routes.js.git"
   },
-  "keywords": ["named route", "route matching", "routes", "routing"],
+  "keywords": [
+    "named route",
+    "route matching",
+    "routes",
+    "routing"
+  ],
   "author": "Rudolf Schmidt",
   "license": "MIT",
   "bugs": {

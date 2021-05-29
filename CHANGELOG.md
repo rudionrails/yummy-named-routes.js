@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/rudionrails/yummy-named-routes.js/compare/v0.0.4...v1.0.0) (2021-05-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* previous "Path" suffix on keys replaced with "Route"
+suffix
+
+### Features
+
+* createRoutes generates object with "Route" suffix now ([001ccb7](https://github.com/rudionrails/yummy-named-routes.js/commit/001ccb75f71a91a5cf99083ed01f99c558397766))
+* Parameters that are not part of the route pattern are added as query string ([afa1fad](https://github.com/rudionrails/yummy-named-routes.js/commit/afa1fad7c257f6d62de83f9aa7d79e4fd7b13fd6))
+
 ### [0.0.4](https://github.com/rudionrails/yummy-named-routes.js/compare/v0.0.3...v0.0.4) (2020-10-09)
 
 
