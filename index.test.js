@@ -50,7 +50,7 @@ test("to return nested route, e.g. people/:personId/tasks/:id", (t) => {
   const routes = createRoutes({ peopleTask: "/people/:personId/tasks/:id" });
   t.is(
     "/people/abc/tasks/123",
-    routes.peopleTaskRoute({ id: "123", personId: "abc" })
+    routes.peopleTaskRoute({ id: "123", personId: "abc" }),
   );
 });
 

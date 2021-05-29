@@ -4,6 +4,8 @@
   "description": "Create named route functions, e.g. taskRoute(\"123\") /* => /tasks/123 */",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "prerelease": "npm run lint && npm run test",
     "release": "standard-version",
     "test": "nyc ava",
     "test:watch": "ava --watch"
@@ -12,12 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/rudionrails/yummy-named-routes.js.git"
   },
-  "keywords": [
-    "named route",
-    "route matching",
-    "routes",
-    "routing"
-  ],
+  "keywords": ["named route", "route matching", "routes", "routing"],
   "author": "Rudolf Schmidt",
   "license": "MIT",
   "bugs": {
@@ -26,7 +23,11 @@
   "homepage": "https://github.com/rudionrails/yummy-named-routes.js#readme",
   "devDependencies": {
     "ava": "^3.13.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "nyc": "^15.1.0",
+    "prettier": "^2.3.0",
     "standard-version": "^9.0.0"
   },
   "dependencies": {

@@ -34,7 +34,7 @@ function createRoutes(objectOrFn) {
       ...acc,
       [`${key}Route`]: typeof value === "function" ? value : createRoute(value),
     }),
-    {}
+    {},
   );
 }
 
