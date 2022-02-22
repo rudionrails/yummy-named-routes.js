@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "include": ["./src/**/*"],
+  "exclude": ["./src/**/*.test.ts"],
+
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "target": "es2019",
+    "outDir": "./dist/",
+
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "declaration": true,
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "typeRoots": ["types", "node_modules/@types"],
+    "types": ["@types/node", "@types/jest"]
+  }
+}

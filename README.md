@@ -23,9 +23,8 @@ userRoute({ id: "123", foo: "bar" }); // => "/users/123?foo=bar"
  * You can access the initially passed pattern in multiple ways
  */
 const pattern = userRoute.pattern; // => "/users/:id"
-const routes = { [userRoute]: true } // => { "/users/:id": true }
+const routes = { [userRoute]: true }; // => { "/users/:id": true }
 const text = `The pattern is "${userRoute}"`; // => The pattern is "/users/:id"
-
 ```
 
 Define your routes. The below example could be in your `src/routes.js` and may use a framework, such as React, Vue, Angular, etc:
@@ -49,8 +48,7 @@ export const myTaskRoute = createRoute("/tasks/:id");
 export default {
   [tasksRoute]: TasksPage,
   [myTaskRoute]: TaskPage,
-}
-
+};
 ```
 
 Now use a route in a component. The example uses React, but this could be any framework:
@@ -69,4 +67,26 @@ function List() {
   )
 }
 
+```
+
+## Release
+
+To release a new version of the package, run the following commands:
+
+```
+# version bump the next patch (detault)
+npm run release
+
+# make sure the new tag is in github
+git push --follow-tags origin master
+
+# publish to npm
+npm publish
+
+```
+
+If you want to control the version, see instructions here for [syandard-version](https://www.npmjs.com/package/standard-version):
+
+```
+npm release -- --release-as minor
 ```
