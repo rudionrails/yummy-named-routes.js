@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/rudionrails/yummy-named-routes.js/compare/v1.0.0...v1.1.0) (2022-02-22)
+
+
+### Features
+
+* Migration to typescript and provides types ([b914e62](https://github.com/rudionrails/yummy-named-routes.js/commit/b914e624f32dc02199682983cffa48ab0dd9aa9b))
+
 ## [1.0.0](https://github.com/rudionrails/yummy-named-routes.js/compare/v0.0.4...v1.0.0) (2021-05-29)
 
 
